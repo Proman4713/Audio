@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aaser Audio Player</title>
+        <link rel="icon" href="Ap.jpg">
+    </head>
+    <body>
+        <input type="file" accept="audio/*" capture id="recorder">
+<audio id="player" controls></audio>
+<script>
+  const recorder = document.getElementById('recorder');
+  const player = document.getElementById('player');
+
+  recorder.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const url = URL.createObjectURL(file);
+    // Do something with the audio file.
+    player.src = url;
+  });
+</script>
+        <!-- link to the audio recorder -->
+<a href="Audio Recorder.html">Audio Recorder Made By Me</a>
+    </body>
+</html>
